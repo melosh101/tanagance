@@ -34,6 +34,9 @@ export type TProduct = typeof productTable.$inferSelect
 export type TIProduct = typeof productTable.$inferInsert
 export type TIProductVariant = typeof productVariantTable.$inferInsert
 
+export type TProductGenderEnum = "Male" | "Female" | "Unisex"
+
+
 export const productRelation = relations(productTable, ({many}) => ({
     productVariant: many(productVariantTable)
 }))
